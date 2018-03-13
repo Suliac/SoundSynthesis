@@ -1,0 +1,45 @@
+﻿  main.cpp
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\utils\ny_utils.h(28): warning C4005: 'NAN' : redéfinition de macro
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\corecrt_math.h(93): note: voir la définition précédente de 'NAN'
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(42): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(48): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(261): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(272): warning C4244: 'initialisation' : conversion de 'float' en 'sint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(304): warning C4244: '+=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(308): warning C4244: '-=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(311): warning C4244: '-=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\continuous_sound.h(323): warning C4244: '=' : conversion de 'float' en 'sint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\sinus_sound.h(83): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\sinus_sound.h(90): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\sinus_sound.h(92): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\noise_sound.h(52): warning C4244: '=' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\sound\filter_reverb.h(95): warning C4018: '>' : incompatibilité signed/unsigned
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\bouton.h(58): warning C4267: 'initialisation' : conversion de 'size_t' en 'uint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\bouton.h(61): warning C4267: 'argument' : conversion de 'size_t' en 'sint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\edtbox.h(120): warning C4267: '=' : conversion de 'size_t' en 'uint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\lstbox.h(71): warning C4267: 'return' : conversion de 'size_t' en 'uint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\slope.h(69): warning C4267: 'return' : conversion de 'size_t' en 'uint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\slope.h(233): warning C4267: 'initialisation' : conversion de 'size_t' en 'uint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\slope.h(236): warning C4267: 'argument' : conversion de 'size_t' en 'sint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\slope.h(237): warning C4267: '=' : conversion de 'size_t' en 'uint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\slope.h(239): warning C4267: 'argument' : conversion de 'size_t' en 'sint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\label.h(39): warning C4267: 'initialisation' : conversion de 'size_t' en 'uint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_engine\src\engine\gui\label.h(47): warning C4267: 'argument' : conversion de 'size_t' en 'sint16', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(120): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(121): warning C4244: 'initialisation' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(125): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(126): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(127): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(272): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(273): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(274): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(275): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(277): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(290): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(291): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(292): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(293): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(295): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+c:\users\sulia\documents\cours\enjmin\prog\synthese_sonore\base_v2\_sound_app\src\main.cpp(330): warning C4018: '<' : incompatibilité signed/unsigned
+log.obj : warning LNK4075: ' /EDITANDCONTINUE' ignorÚ Ó cause de la spÚcification '/SAFESEH'
+  base.vcxproj -> C:\Users\sulia\Documents\Cours\ENJMIN\PROG\Synthese_Sonore\base_v2\_sound_app\Debug\base.exe
