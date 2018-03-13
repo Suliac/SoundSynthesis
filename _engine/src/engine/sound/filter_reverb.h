@@ -28,95 +28,22 @@ public:
 
 	virtual float doFilter(float ech)
 	{
-		float result = ech;
+		float tmpResult = 0;
+		tmpResult += CombFilter(ech, 0.75f, _CombBuffer );
+		tmpResult += AllPassFilter(tmpResult, 0.75f, _AllPassBuffer);
 
-		////////////////////////////////////
-		// Comb filter
-		// 1
-		//float comb1Res = 0.0f;
-		//_CombBuffer.push(result);
-		//float offset = 0;
-
-		//if (_CombBuffer.size() > _SizeBuffer)
-		//{
-		//	offset = _CombBuffer.front();
-		//	_CombBuffer.pop();
-		//}
-
-		//comb1Res = result + offset * _Gain1;
-
-		//// 2
-		//float comb2Res = 0.0f;
-		//_CombBuffer2.push(result);
-		//offset = 0;
-
-		//if (_CombBuffer2.size() > _SizeBuffer)
-		//{
-		//	offset = _CombBuffer2.front();
-		//	_CombBuffer2.pop();
-		//}
-
-		//comb2Res = result + offset * _Gain2;
-
-		//// 3
-		//float comb3Res = 0.0f;
-		//_CombBuffer3.push(result);
-		//offset = 0;
-
-		//if (_CombBuffer3.size() > _SizeBuffer)
-		//{
-		//	offset = _CombBuffer3.front();
-		//	_CombBuffer3.pop();
-		//}
-
-		//comb3Res = result + offset * _Gain3;
-
-		//// 4
-		//float comb4Res = 0.0f;
-		//_CombBuffer4.push(result);
-		//offset = 0;
-
-		//if (_CombBuffer4.size() > _SizeBuffer)
-		//{
-		//	offset = _CombBuffer4.front();
-		//	_CombBuffer4.pop();
-		//}
-
-		//comb4Res = result + offset * _Gain4;
-		//////////////////////////////////////
-		//result = comb1Res + comb2Res + comb3Res + comb4Res;
-		////////////////////////////////////
-		// All-pass filter
-		// 1
-		float tmpResult = result * (_Gain5*-1);
-		_AllPassBuffer.push(result);
-		float offset = 0;
-
-		if (_AllPassBuffer.size() > _SizeBuffer)
-		{
-			offset = _AllPassBuffer.front();
-			_AllPassBuffer.pop();
-		}
-
-		result += offset * _Gain5 + tmpResult;
-
-		//// 2
-		//tmpResult = result * (_Gain6*-1);
-		//_AllPassBuffer2.push(result);
-		//offset = 0;
-
-		//if (_AllPassBuffer2.size() > _SizeBuffer)
-		//{
-		//	offset = _AllPassBuffer2.front();
-		//	_AllPassBuffer2.pop();
-		//}
-
-		//result += offset * _Gain6 + tmpResult;
-
-		////////////////////////
+		
+		tmpResult += CombFilter(ech, 0.50f, _CombBuffer2);
+		tmpResult += CombFilter(ech, 0.25f, _CombBuffer3);
+		tmpResult += CombFilter(ech, 0.85f, _CombBuffer4);
 
 
-		return ech * _Reverb + result * _Reverb;
+		tmpResult += AllPassFilter(tmpResult, 0.6f, _AllPassBuffer2);
+
+
+		tmpResult = tmpResult * 0.25f + ech * 0.25f;
+
+		return tmpResult * _Reverb * 0.5f;
 	}
 
 private:
@@ -131,12 +58,39 @@ private:
 	int _SizeBuffer = 10000;
 	float _Reverb = 0.f;
 
-	float _Gain1 = 1.f;
-	float _Gain2 = 0.9f;
-	float _Gain3 = 0.8f;
-	float _Gain4 = 0.7f;
-	float _Gain5 = 0.6f;
-	float _Gain6 = 0.5f;
+	float CombFilter(float ech, float gain, std::queue<float>& buffer)
+	{
+		float currentEch = ech;
+		float pastEch = 0;
+
+		if (buffer.size() > _SizeBuffer)
+		{
+			pastEch = buffer.front();
+			buffer.pop();
+		}
+
+		buffer.push(currentEch + pastEch * gain);
+
+		return pastEch * 0.5f;
+	}
+
+	float AllPassFilter(float ech, float gain, std::queue<float>& buffer)
+	{
+		float currentEch = ech;
+		float pastEch = 0;
+		float addAtTheEnd = 0;
+
+		if (buffer.size() > _SizeBuffer)
+		{
+			pastEch = buffer.front();
+			buffer.pop();
+		}
+
+		float toAddToBuffer = currentEch + pastEch * gain;
+		buffer.push(toAddToBuffer);
+
+		return (pastEch + toAddToBuffer * -gain) * 0.5f;
+	}
 };
 
 
