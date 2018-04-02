@@ -26,18 +26,17 @@ public:
 
 	}
 
+	// Ma reverb : filtre peigne + all-pass + 3 peignes sur le même échantillon + all pass à la fin sur le résultat
 	virtual float doFilter(float ech)
 	{
 		float tmpResult = 0;
 		tmpResult += CombFilter(ech, 0.75f, _CombBuffer );
-		tmpResult += AllPassFilter(tmpResult, 0.75f, _AllPassBuffer);
-
-		
 		tmpResult += CombFilter(ech, 0.50f, _CombBuffer2);
 		tmpResult += CombFilter(ech, 0.25f, _CombBuffer3);
 		tmpResult += CombFilter(ech, 0.85f, _CombBuffer4);
 
 
+		tmpResult += AllPassFilter(tmpResult, 0.75f, _AllPassBuffer);
 		tmpResult += AllPassFilter(tmpResult, 0.6f, _AllPassBuffer2);
 
 
