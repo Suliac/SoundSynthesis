@@ -26,7 +26,6 @@ public:
 
 	}
 
-	// Ma reverb : filtre peigne + all-pass + 3 peignes sur le même échantillon + all pass à la fin sur le résultat
 	virtual float doFilter(float ech)
 	{
 		float tmpResult = 0;
